@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPTMail Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="settings">
+    <h3>GPTMail Settings</h3>
+    <label>
+        OpenAI API Key: <br>
+        <input type="text" id="apiKey">
+    </label>
+    <br>
+    <label>
+        Default Language Model: <br>
+        <select id="model">
+            <option value="gpt-3.5-turbo-16k" selected>GPT-3.5 (16K)</option>
+            <option value="gpt-4-32k">GPT-4 (32K)</option>
+            <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+            <option value="gpt-4">GPT-4</option>
+        </select>
+    </label>
+    <br>
+    <label>
+        Auto-summarize Opened Threads: 
+        <input type="checkbox" id="autoSummary">
+    </label>
+    <br>
+    <label>
+        Default Summary Prompt: <br>
+        <textarea id="summaryPrompt">Summarize the contents of this email thread:</textarea>
+    </label>
+    <br>
+    <label>
+        Default Message Prompt: <br>
+        <textarea id="messagePrompt">You're a helpful assistant managing my email inbox. Here is the email thread to work with:</textarea>
+    </label>
+    <br>
+    <button id="save">Save</button>
+    <script src="settings.js"></script>
+</body>
+</html>
